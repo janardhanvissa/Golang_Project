@@ -1,5 +1,3 @@
-// Golang program to find a struct type 
-// using type assertions 
 package main 
   
 import "fmt"
@@ -23,8 +21,6 @@ func Teststruct(x interface{}) {
 } 
   
 func main() { 
-    // Declaring and initializing a 
-    // struct using a struct literal 
     t := Employee{"Janardhan", 1234} 
     Teststruct(t) 
 } 
