@@ -1,24 +1,29 @@
 package main
 
-import (
-	"fmt"
-	"log"
-	"os"
-)
+import "errors"
+import "fmt"
+import "math"
 
-func init() {
-	nf, err := os.Create("log.txt")
-	if err != nil {
-		fmt.Println(err)
-	}
-	log.SetOutput(nf)
+func Sqrt(value float64)(float64, error) {
+   if(value < 0){
+      return 0, errors.New("Math: negative number passed to Sqrt")
+   }
+   return math.Sqrt(value), nil
 }
 func main() {
-	_, err := os.Open("cmd.txt")
-	if err != nil {
-		//fmt.Println("error occured", err)
-		log.Println("error occured", err)
-		//log.Fatalln(err)
-		//panic(err)
-	}
+   result, err:= Sqrt(-1)
+
+   if err != nil {
+      fmt.Println(err)
+   } else {
+      fmt.Println(result)
+   }
+   
+   result, err = Sqrt(9)
+
+   if err != nil {
+      fmt.Println(err)
+   } else {
+      fmt.Println(result)
+   }
 }
