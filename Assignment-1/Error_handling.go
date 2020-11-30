@@ -1,8 +1,10 @@
 package main
 
-import "errors"
-import "fmt"
-import "math"
+import (
+   "errors"
+   "fmt"
+   "math"
+)   
 
 func Sqrt(value float64)(float64, error) {
    if(value < 0){
