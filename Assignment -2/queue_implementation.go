@@ -1,5 +1,3 @@
-//Queue program implementation
-
 package main
 
 import (
