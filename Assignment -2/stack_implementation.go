@@ -1,5 +1,3 @@
-//Stack Program implementation
-
 package main
 
 import (
